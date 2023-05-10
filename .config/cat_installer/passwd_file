@@ -1,0 +1,5 @@
+[802-1x]
+identity=splekozi@uni-due.de
+password=B#PUA^%3@Sek%4
+phase2-auth=peap
+

@@ -1,0 +1,239 @@
+{
+    "position": "top",
+    "layer": "top",
+    "margin-top": 0,
+    "margin-left": 0,
+    "margin-right": 0,
+    // "margin-bottom": -6,
+
+    // Choose the order of the modules
+    "modules-left": ["wlr/workspaces", "custom/sep_r_inter", "tray", "custom/spc_l"],
+    "modules-center": ["clock"],
+    // "modules-right": ["temperature", "custom/sep_l_inter", "cpu", "custom/sep_l_inter", "memory", "custom/sep_l_inter", "pulseaudio", "custom/sep_l_inter", "network", "custom/sep_l_inter", "custom/notification"],
+    "modules-right": ["custom/spc_r", "temperature", "custom/sep_l_inter", "cpu", "custom/sep_l_inter", "memory", "custom/sep_l_inter", "backlight", "custom/sep_l_inter", "pulseaudio", "custom/sep_l_inter", "network", "custom/sep_l_inter", "battery", "custom/sep_l_inter", "custom/notification"],
+
+    "custom/sep_l_inter": {
+		// "rotate": 270,
+		"tooltip": false,
+		"format": ""
+    },
+	"custom/sep_r_inter": {
+		"tooltip": false,
+		"format": " "
+	},
+	"custom/spc_r": {
+		"format": " "
+	},
+	"custom/spc_l": {
+		"format": " "
+	},
+
+	"custom/hostname": {
+		"tooltip": false,
+		"exec": "hostname",
+		"interval": "once"
+	},
+
+	"custom/notification": {
+		// "rotate": 270,
+		"format": "{icon} ",
+		"format-icons": {
+			"notification": "<span foreground='red'><sup></sup></span>",
+			"none": " ",
+			"dnd-notification": "<span foreground='red'><sup></sup></span>",
+			"dnd-none": " "
+		},
+		"return-type": "json",
+		"exec-if": "which swaync-client",
+		"exec": "swaync-client -swb",
+		"on-click": "swaync-client -t -sw",
+		"on-click-right": "swaync-client -d -sw",
+		"escape": true
+	},
+
+	"custom/date": {
+		"format": "  {}",
+		"interval": 3600,
+		"exec": "$HOME/.config/waybar/waybar-date.sh"
+	},
+
+	"wlr/workspaces": {
+		"on-click": "activate",
+		"format": "{icon}",
+		"sort-by-number": true,
+		// "persistent_workspaces": {
+		// 	"1": [],
+		// 	"2": [],
+		// 	"3": [],
+		// 	"4": [],
+		// 	"5": [],
+		// 	"6": [],
+		// 	"7": [],
+		// 	"8": [],
+		// 	"9": [],
+		// 	"10": []
+		// },
+		// "format-icons": {
+		// 	"1": "🟅",
+		// 	"2": "🟅",
+		// 	"3": "🟅",
+		// 	"4": "🟅",
+		// 	"5": "🟅",
+		// 	"6": "🟅",
+		// 	"7": "🟅",
+		// 	"8": "🟅",
+		// 	"9": "🟅",
+		// 	"default": "🟅"
+		// }
+	},
+
+    "keyboard-state": {
+		// "rotate": 90,
+        "numlock": true,
+        "capslock": true,
+        "format": "{name} {icon}",
+        "format-icons": {
+            "locked": "",
+            "unlocked": ""
+        }
+    },
+
+    "sway/mode": {
+		// "rotate": 90,
+        "format": "<span style=\"italic\">{}</span>"
+    },
+
+    "mpd": {
+		// "rotate": 90,
+        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
+        "format-disconnected": "Disconnected ",
+        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+        "unknown-tag": "N/A",
+        "interval": 2,
+        "consume-icons": {
+            "on": " "
+        },
+        "random-icons": {
+            "off": "<span color=\"#f53c3c\"></span> ",
+            "on": " "
+        },
+        "repeat-icons": {
+            "on": " "
+        },
+        "single-icons": {
+            "on": "1 "
+        },
+        "state-icons": {
+            "paused": "",
+            "playing": ""
+        },
+        "tooltip-format": "MPD (connected)",
+        "tooltip-format-disconnected": "MPD (disconnected)"
+    },
+
+    "idle_inhibitor": {
+		// "rotate": 90,
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+
+    "tray": {
+        "spacing": 12,
+        "icon-size": 20
+    },
+
+	"clock": {
+		"format": "{:%H:%M} ",
+		"interval": 60,
+		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+	},
+
+    "cpu": {
+        "format": "󰻠 {usage}%",
+        "tooltip": false
+    },
+
+    "memory": {
+        "format": " {}%"
+    },
+
+    "temperature": {
+        // "thermal-zone": 2,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 85,
+        // "format-critical": "{temperatureC}°C {icon}",
+        "format": "{icon} {temperatureC}°C",
+        "format-icons": ["", "", ""]
+    },
+
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{icon}{percent}%",
+        "format-icons": [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+    },
+
+    "battery": {
+        "states": {
+            "good": 270,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon}{capacity}%",
+        "format-charging": "󰂄{capacity}%",
+        "format-plugged": "{capacity}%",
+        "format-alt": "{icon}{time}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["  ", "  ", "  ", "  ", "  "]
+    },
+    "battery#bat2": {
+        "bat": "BAT2"
+    },
+
+    "network": {
+		"format-wifi": " {essid}",
+		"format-ethernet": " {ipaddr}",
+		"format-disconnected": " Disconnected",
+		"tooltip-format-wifi": "Signal Strenght: {signalStrength}% | Down Speed: {bandwidthDownBits}, Up Speed: {bandwidthUpBits}",
+        "format-linked": "{ifname} (No IP)  ",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+
+    "pulseaudio": {
+		// "rotate": 270,
+        // "scroll-step": 1, // %, can be a float
+        "format": "{icon}{volume}%  {format_source}",
+        "format-bluetooth": "{icon}{volume}%  {format_source}",
+        "format-bluetooth-muted": "{icon}  {format_source}",
+        "format-muted": "  {format_source}",
+        "format-source": " {volume}%",
+        "format-source-muted": " ",
+        "format-icons": {
+            "headphone": " ",
+            "hands-free": " ",
+            "headset": " ",
+            "phone": " ",
+            "portable": " ",
+            "car": " ",
+            "default": [" ", " ", " "]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    "custom/media": {
+		// "rotate": 270,
+        "format": "{icon} {}",
+        "return-type": "json",
+        "max-length": 40,
+        "format-icons": {
+            "spotify": "",
+            "default": "🎜"
+        },
+        "escape": true,
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+    }
+}

@@ -1,0 +1,54 @@
+[ExtHistoryComboEXTENSION_CUSTOM_TEMPLATE]
+CompletionList=
+HistoryList=
+
+[ExtHistoryComboEXTENSION_TEMPLATE]
+CompletionList=$:1
+HistoryList=$
+
+[ExtHistoryComboFILENAME_CUSTOM_TEMPLATE]
+CompletionList=
+HistoryList=
+
+[ExtHistoryComboFILENAME_TEMPLATE]
+CompletionList=$:1
+HistoryList=$
+
+[ExtHistoryComboPREVIX_CUSTOM_TEMPLATE]
+CompletionList=
+HistoryList=
+
+[ExtHistoryComboSUFFIX_CUSTOM_TEMPLATE]
+CompletionList=
+HistoryList=
+
+[GUISettings]
+Advanced=false
+Column0=100
+Column1=720
+ExtensionSplitDot=0
+ExtensionSplitMode=1
+FileListSorting=0
+FileListSortingCustomMode=0
+FileListSortingCustomToken=creationdate;yyyyMMddHHmm
+ImagePreview2=true
+ImagePreviewName2=true
+StartIndex=1
+Stepping=1
+firststart4=false
+
+[KFileDialog Settings]
+Recent Files[$e]=1616762541_488000000_s40_camera_basler_south_50mm.txt,file:$HOME/source/vision-based-traffic-surveillance/training/a9_dataset_r00_s02/validate/labels/1616762544_689000000_s40_camera_basler_south_50mm.txt,file:$HOME/source/vision-based-traffic-surveillance/training/a9_dataset_r00_s02/validate/labels/1616762544_288000000_s40_camera_basler_south_50mm.txt,file:$HOME/source/vision-based-traffic-surveillance/training/a9_dataset_r00_s02/validate/labels/1616762543_889000000_s40_camera_basler_south_50mm.txt,file:$HOME/source/vision-based-traffic-surveillance/training/a9_dataset_r00_s02/validate/labels/1616762543_488000000_s40_camera_basler_south_50mm.txt,file:$HOME/source/vision-based-traffic-surveillance/training/a9_dataset_r00_s02/validate/labels/1616762543_088000000_s40_camera_basler_south_50mm.txt,file:$HOME/source/vision-based-traffic-surveillance/training/a9_dataset_r00_s02/validate/labels/1616762542_688000000_s40_camera_basler_south_50mm.txt,file:$HOME/source/vision-based-traffic-surveillance/training/a9_dataset_r00_s02/validate/labels/1616762542_289000000_s40_camera_basler_south_50mm.txt,file:$HOME/source/vision-based-traffic-surveillance/training/a9_dataset_r00_s02/validate/labels/1616762541_889000000_s40_camera_basler_south_50mm.txt,file:$HOME/source/vision-based-traffic-surveillance/training/a9_dataset_r00_s02/validate/labels/1616762541_488000000_s40_camera_basler_south_50mm.txt
+Recent URLs[$e]=file:$HOME/source/vision-based-traffic-surveillance/training/a9_dataset_r00_s02/validate/labels/
+detailViewIconSize=16
+
+[KRenameWindowSettings]
+2 screens: Height=1038
+2 screens: Width=944
+RestorePositionForNextInstance=false
+
+[PluginSettings]
+JavaScriptDefinitions=
+JavaScriptVariableNames=
+JavaScriptVariableTypes=
+JavaScriptVariableValues=

@@ -1,0 +1,7 @@
+datasets_dir: /home/lk/source/vision-based-traffic-surveillance/src/datasets
+weights_dir: weights
+runs_dir: runs
+uuid: 30d9f05adc3998283c82fa53f554e42b5b3d9585d2a14812ecfe573d631501c8
+sync: true
+api_key: ''
+settings_version: 0.0.3
